@@ -15,13 +15,23 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UrD-lz-sJE">
+                                <rect key="frame" x="137" y="382" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="kr6-7p-6tR" kind="show" id="fQv-BV-c8M"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Scenario" id="q4Y-9X-rRh">
                         <barButtonItem key="rightBarButtonItem" title="Recordings" id="nnj-Zj-bHc">
                             <connections>
-                                <segue destination="h7S-HF-P6d" kind="show" id="pD3-9O-ACq"/>
+                                <segue destination="h7S-HF-P6d" kind="show" id="xs0-xH-gRD"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -50,33 +60,29 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FXs-T3-9yP">
-                                <rect key="frame" x="0.0" y="44" width="390" height="44"/>
-                                <items>
-                                    <navigationItem title="Title" id="c8d-Rk-gGG">
-                                        <barButtonItem key="rightBarButtonItem" title="Recordings" id="aYZ-OP-gOu"/>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="DoQ-mr-wuc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="oqG-bm-BhY" firstAttribute="leading" secondItem="DoQ-mr-wuc" secondAttribute="leading" id="9WX-GU-kyY"/>
-                            <constraint firstItem="FXs-T3-9yP" firstAttribute="trailing" secondItem="DoQ-mr-wuc" secondAttribute="trailing" id="Ebl-3c-B7T"/>
+                            <constraint firstItem="Yuw-L1-lpu" firstAttribute="top" secondItem="DoQ-mr-wuc" secondAttribute="top" id="Adn-Cy-esq"/>
                             <constraint firstItem="DoQ-mr-wuc" firstAttribute="trailing" secondItem="Yuw-L1-lpu" secondAttribute="trailing" id="JmB-Se-mjW"/>
                             <constraint firstItem="ffB-lr-AEq" firstAttribute="top" secondItem="oqG-bm-BhY" secondAttribute="bottom" constant="16" id="OqD-J2-ScA"/>
-                            <constraint firstItem="FXs-T3-9yP" firstAttribute="leading" secondItem="DoQ-mr-wuc" secondAttribute="leading" id="RAy-Pz-Jw5"/>
-                            <constraint firstItem="FXs-T3-9yP" firstAttribute="top" secondItem="DoQ-mr-wuc" secondAttribute="top" id="Xas-u6-6FT"/>
                             <constraint firstItem="oqG-bm-BhY" firstAttribute="top" secondItem="Yuw-L1-lpu" secondAttribute="bottom" constant="16" id="Ygu-zq-PDN"/>
                             <constraint firstItem="ffB-lr-AEq" firstAttribute="bottom" secondItem="DoQ-mr-wuc" secondAttribute="bottom" id="Zsm-b9-Acq"/>
-                            <constraint firstItem="Yuw-L1-lpu" firstAttribute="top" secondItem="FXs-T3-9yP" secondAttribute="bottom" id="goV-Ca-4Tu"/>
                             <constraint firstItem="ffB-lr-AEq" firstAttribute="leading" secondItem="DoQ-mr-wuc" secondAttribute="leading" id="ken-3n-h9K"/>
                             <constraint firstItem="DoQ-mr-wuc" firstAttribute="trailing" secondItem="oqG-bm-BhY" secondAttribute="trailing" id="lnX-7K-2Ve"/>
                             <constraint firstItem="DoQ-mr-wuc" firstAttribute="trailing" secondItem="ffB-lr-AEq" secondAttribute="trailing" id="pjC-vt-I33"/>
                             <constraint firstItem="Yuw-L1-lpu" firstAttribute="leading" secondItem="DoQ-mr-wuc" secondAttribute="leading" id="t2f-Tl-L4e"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Training" id="G6V-Rn-Oyf">
+                        <barButtonItem key="rightBarButtonItem" title="Recording" id="tLB-xx-KJg">
+                            <connections>
+                                <segue destination="h7S-HF-P6d" kind="show" id="Tyf-7h-60g"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="recordImage" destination="ffB-lr-AEq" id="RTe-fI-cZA"/>
                         <outlet property="timerLabel" destination="oqG-bm-BhY" id="Nvj-na-6NJ"/>
@@ -137,7 +143,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zht-rW-Hoi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="938.46153846153845" y="-611.37440758293837"/>
+            <point key="canvasLocation" x="938" y="-616"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="h8h-Li-H1t">
@@ -152,7 +158,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rdd-3c-al1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1740" y="-611"/>
+            <point key="canvasLocation" x="1740" y="-616"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gLe-G7-O9r">
@@ -173,6 +179,9 @@
             <point key="canvasLocation" x="28.985507246376812" y="88.392857142857139"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="xs0-xH-gRD"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="StartRecordButton" width="62" height="62"/>
         <systemColor name="systemBackgroundColor">
