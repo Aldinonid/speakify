@@ -15,42 +15,9 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-<<<<<<< HEAD
                         <subviews>
-<<<<<<< HEAD
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NXH-Fo-1fZ">
-                                <rect key="frame" x="45" y="373" width="300" height="46"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.61960784313725492" green="0.74509803921568629" blue="0.85098039215686272" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <state key="normal" title="Job Interview">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D5a-Iw-i83">
-                                <rect key="frame" x="45" y="722" width="300" height="46"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.61960784313725492" green="0.74509803921568629" blue="0.85098039215686272" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <state key="normal" title="Speech">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="GRx-5q-PKB">
-                                <rect key="frame" x="45" y="467" width="300" height="300"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="YQ8-ni-E6c">
-                                <rect key="frame" x="45" y="127" width="300" height="292"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-=======
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UrD-lz-sJE">
-                                <rect key="frame" x="137" y="382" width="46" height="30"/>
-=======
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image2" translatesAutoresizingMaskIntoConstraints="NO" id="byK-mj-CTJ">
                                 <rect key="frame" x="45" y="430" width="300" height="300"/>
->>>>>>> new
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nNw-uf-G9i">
@@ -81,46 +48,23 @@
                                     <action selector="button1Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ljn-S2-yfo"/>
                                 </connections>
                             </button>
->>>>>>> bb32fd14b6df25f255ac2bec687768a0410ec2db
                         </subviews>
-=======
->>>>>>> parent of bb32fd1... Update on recording page to extract filepath and filenames
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Scenario" id="q4Y-9X-rRh">
-<<<<<<< HEAD
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="cf3-6S-Q16">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="OFp-6t-ZGW">
-                                <rect key="frame" x="324" y="7" width="50" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="History"/>
-                            </button>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="button1" destination="NXH-Fo-1fZ" id="23Y-ay-roR"/>
-                        <outlet property="button2" destination="D5a-Iw-i83" id="FdT-Ev-rjy"/>
-                        <outlet property="image1" destination="YQ8-ni-E6c" id="cwF-eR-sFP"/>
-                        <outlet property="image2" destination="GRx-5q-PKB" id="4ty-qQ-mEC"/>
-                    </connections>
-=======
                         <barButtonItem key="rightBarButtonItem" title="Recordings" id="nnj-Zj-bHc">
                             <connections>
-                                <segue destination="h7S-HF-P6d" kind="show" id="pD3-9O-ACq"/>
+                                <segue destination="h7S-HF-P6d" kind="show" id="xs0-xH-gRD"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-<<<<<<< HEAD
->>>>>>> bb32fd14b6df25f255ac2bec687768a0410ec2db
-=======
                     <connections>
                         <outlet property="button1" destination="UAS-Xe-dLz" id="Qwr-Rn-ei3"/>
                         <outlet property="button2" destination="nNw-uf-G9i" id="esI-va-jQT"/>
                         <outlet property="image1" destination="EHa-W1-0po" id="Qxf-Xn-bir"/>
                         <outlet property="image2" destination="byK-mj-CTJ" id="Xs3-Ni-SSj"/>
                     </connections>
->>>>>>> new
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -146,33 +90,29 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FXs-T3-9yP">
-                                <rect key="frame" x="0.0" y="44" width="390" height="44"/>
-                                <items>
-                                    <navigationItem title="Title" id="c8d-Rk-gGG">
-                                        <barButtonItem key="rightBarButtonItem" title="Recordings" id="aYZ-OP-gOu"/>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="DoQ-mr-wuc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="oqG-bm-BhY" firstAttribute="leading" secondItem="DoQ-mr-wuc" secondAttribute="leading" id="9WX-GU-kyY"/>
-                            <constraint firstItem="FXs-T3-9yP" firstAttribute="trailing" secondItem="DoQ-mr-wuc" secondAttribute="trailing" id="Ebl-3c-B7T"/>
+                            <constraint firstItem="Yuw-L1-lpu" firstAttribute="top" secondItem="DoQ-mr-wuc" secondAttribute="top" id="Adn-Cy-esq"/>
                             <constraint firstItem="DoQ-mr-wuc" firstAttribute="trailing" secondItem="Yuw-L1-lpu" secondAttribute="trailing" id="JmB-Se-mjW"/>
                             <constraint firstItem="ffB-lr-AEq" firstAttribute="top" secondItem="oqG-bm-BhY" secondAttribute="bottom" constant="16" id="OqD-J2-ScA"/>
-                            <constraint firstItem="FXs-T3-9yP" firstAttribute="leading" secondItem="DoQ-mr-wuc" secondAttribute="leading" id="RAy-Pz-Jw5"/>
-                            <constraint firstItem="FXs-T3-9yP" firstAttribute="top" secondItem="DoQ-mr-wuc" secondAttribute="top" id="Xas-u6-6FT"/>
                             <constraint firstItem="oqG-bm-BhY" firstAttribute="top" secondItem="Yuw-L1-lpu" secondAttribute="bottom" constant="16" id="Ygu-zq-PDN"/>
                             <constraint firstItem="ffB-lr-AEq" firstAttribute="bottom" secondItem="DoQ-mr-wuc" secondAttribute="bottom" id="Zsm-b9-Acq"/>
-                            <constraint firstItem="Yuw-L1-lpu" firstAttribute="top" secondItem="FXs-T3-9yP" secondAttribute="bottom" id="goV-Ca-4Tu"/>
                             <constraint firstItem="ffB-lr-AEq" firstAttribute="leading" secondItem="DoQ-mr-wuc" secondAttribute="leading" id="ken-3n-h9K"/>
                             <constraint firstItem="DoQ-mr-wuc" firstAttribute="trailing" secondItem="oqG-bm-BhY" secondAttribute="trailing" id="lnX-7K-2Ve"/>
                             <constraint firstItem="DoQ-mr-wuc" firstAttribute="trailing" secondItem="ffB-lr-AEq" secondAttribute="trailing" id="pjC-vt-I33"/>
                             <constraint firstItem="Yuw-L1-lpu" firstAttribute="leading" secondItem="DoQ-mr-wuc" secondAttribute="leading" id="t2f-Tl-L4e"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Training" id="G6V-Rn-Oyf">
+                        <barButtonItem key="rightBarButtonItem" title="Recording" id="tLB-xx-KJg">
+                            <connections>
+                                <segue destination="h7S-HF-P6d" kind="show" id="Tyf-7h-60g"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="recordImage" destination="ffB-lr-AEq" id="RTe-fI-cZA"/>
                         <outlet property="timerLabel" destination="oqG-bm-BhY" id="Nvj-na-6NJ"/>
@@ -182,24 +122,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ycC-Mw-wF1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="915.38461538461536" y="800.47393364928905"/>
-<<<<<<< HEAD
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="YOi-gg-NbM">
-            <objects>
-                <viewController id="en2-Rm-wsK" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8Lk-5W-Cs9">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="wXa-WE-8to"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lb7-tr-jhb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-29" y="-611"/>
-=======
->>>>>>> bb32fd14b6df25f255ac2bec687768a0410ec2db
         </scene>
         <!--Recordings-->
         <scene sceneID="uVa-UB-wUB">
@@ -244,13 +166,6 @@
                         <viewLayoutGuide key="safeArea" id="hdI-K7-eoX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-<<<<<<< HEAD
-                    <navigationItem key="navigationItem" id="f3D-T9-qcl"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Zht-rW-Hoi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="938.46153846153845" y="-611.37440758293837"/>
-=======
                     <navigationItem key="navigationItem" id="dcT-0Y-sSq"/>
                     <connections>
                         <outlet property="recordingTable" destination="X9g-Pb-By3" id="a4T-pT-kwQ"/>
@@ -258,7 +173,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zht-rW-Hoi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="938.46153846153845" y="-611.37440758293837"/>
+            <point key="canvasLocation" x="938" y="-616"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="h8h-Li-H1t">
@@ -273,12 +188,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rdd-3c-al1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-<<<<<<< HEAD
             <point key="canvasLocation" x="1740" y="-616"/>
->>>>>>> bb32fd14b6df25f255ac2bec687768a0410ec2db
-=======
-            <point key="canvasLocation" x="1740" y="-611"/>
->>>>>>> parent of bb32fd1... Update on recording page to extract filepath and filenames
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gLe-G7-O9r">
@@ -299,21 +209,13 @@
             <point key="canvasLocation" x="28.985507246376812" y="88.392857142857139"/>
         </scene>
     </scenes>
-<<<<<<< HEAD
-    <resources>
-<<<<<<< HEAD
-        <image name="Image" width="375" height="250"/>
-=======
-=======
     <inferredMetricsTieBreakers>
         <segue reference="Tyf-7h-60g"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Image" width="375" height="250"/>
         <image name="Image2" width="344" height="344"/>
->>>>>>> new
         <image name="StartRecordButton" width="62" height="62"/>
->>>>>>> bb32fd14b6df25f255ac2bec687768a0410ec2db
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
