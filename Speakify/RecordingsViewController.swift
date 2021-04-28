@@ -30,8 +30,8 @@ extension RecordingsViewController: UITableViewDelegate, UITableViewDataSource {
         
         let title = categories[indexPath.row]
         
-        cell.labelTitle?.text = title
-        cell.detailTextLabel?.text = title
+        cell.textLabel?.text = title
+        cell.detailTextLabel?.text = "03.00"
         return cell
     }
     
