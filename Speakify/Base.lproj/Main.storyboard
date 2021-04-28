@@ -16,6 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+<<<<<<< HEAD
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NXH-Fo-1fZ">
                                 <rect key="frame" x="45" y="373" width="300" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -42,11 +43,22 @@
                                 <rect key="frame" x="45" y="127" width="300" height="292"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+=======
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UrD-lz-sJE">
+                                <rect key="frame" x="137" y="382" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="kr6-7p-6tR" kind="show" id="fQv-BV-c8M"/>
+                                </connections>
+                            </button>
+>>>>>>> bb32fd14b6df25f255ac2bec687768a0410ec2db
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Scenario" id="q4Y-9X-rRh">
+<<<<<<< HEAD
                         <barButtonItem key="rightBarButtonItem" style="plain" id="cf3-6S-Q16">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="OFp-6t-ZGW">
                                 <rect key="frame" x="324" y="7" width="50" height="30"/>
@@ -61,6 +73,14 @@
                         <outlet property="image1" destination="YQ8-ni-E6c" id="cwF-eR-sFP"/>
                         <outlet property="image2" destination="GRx-5q-PKB" id="4ty-qQ-mEC"/>
                     </connections>
+=======
+                        <barButtonItem key="rightBarButtonItem" title="Recordings" id="nnj-Zj-bHc">
+                            <connections>
+                                <segue destination="h7S-HF-P6d" kind="show" id="xs0-xH-gRD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+>>>>>>> bb32fd14b6df25f255ac2bec687768a0410ec2db
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -69,17 +89,56 @@
         <!--Training-->
         <scene sceneID="Ieg-fx-6GM">
             <objects>
-                <viewController title="Training" id="kr6-7p-6tR" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="NEz-Fc-ds3">
+                <viewController title="Training" id="kr6-7p-6tR" customClass="TrainingViewController" customModule="Speakify" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NEz-Fc-ds3" customClass="tra">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="StartRecordButton" translatesAutoresizingMaskIntoConstraints="NO" id="ffB-lr-AEq">
+                                <rect key="frame" x="0.0" y="748" width="390" height="62"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Yuw-L1-lpu">
+                                <rect key="frame" x="0.0" y="88" width="390" height="599"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00 : 00 : 00.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oqG-bm-BhY">
+                                <rect key="frame" x="0.0" y="703" width="390" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="DoQ-mr-wuc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="oqG-bm-BhY" firstAttribute="leading" secondItem="DoQ-mr-wuc" secondAttribute="leading" id="9WX-GU-kyY"/>
+                            <constraint firstItem="Yuw-L1-lpu" firstAttribute="top" secondItem="DoQ-mr-wuc" secondAttribute="top" id="Adn-Cy-esq"/>
+                            <constraint firstItem="DoQ-mr-wuc" firstAttribute="trailing" secondItem="Yuw-L1-lpu" secondAttribute="trailing" id="JmB-Se-mjW"/>
+                            <constraint firstItem="ffB-lr-AEq" firstAttribute="top" secondItem="oqG-bm-BhY" secondAttribute="bottom" constant="16" id="OqD-J2-ScA"/>
+                            <constraint firstItem="oqG-bm-BhY" firstAttribute="top" secondItem="Yuw-L1-lpu" secondAttribute="bottom" constant="16" id="Ygu-zq-PDN"/>
+                            <constraint firstItem="ffB-lr-AEq" firstAttribute="bottom" secondItem="DoQ-mr-wuc" secondAttribute="bottom" id="Zsm-b9-Acq"/>
+                            <constraint firstItem="ffB-lr-AEq" firstAttribute="leading" secondItem="DoQ-mr-wuc" secondAttribute="leading" id="ken-3n-h9K"/>
+                            <constraint firstItem="DoQ-mr-wuc" firstAttribute="trailing" secondItem="oqG-bm-BhY" secondAttribute="trailing" id="lnX-7K-2Ve"/>
+                            <constraint firstItem="DoQ-mr-wuc" firstAttribute="trailing" secondItem="ffB-lr-AEq" secondAttribute="trailing" id="pjC-vt-I33"/>
+                            <constraint firstItem="Yuw-L1-lpu" firstAttribute="leading" secondItem="DoQ-mr-wuc" secondAttribute="leading" id="t2f-Tl-L4e"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Training" id="G6V-Rn-Oyf">
+                        <barButtonItem key="rightBarButtonItem" title="Recording" id="tLB-xx-KJg">
+                            <connections>
+                                <segue destination="h7S-HF-P6d" kind="show" id="Tyf-7h-60g"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="recordImage" destination="ffB-lr-AEq" id="RTe-fI-cZA"/>
+                        <outlet property="timerLabel" destination="oqG-bm-BhY" id="Nvj-na-6NJ"/>
+                        <outlet property="trainingImage" destination="Yuw-L1-lpu" id="kMf-8A-7ot"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ycC-Mw-wF1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="915.38461538461536" y="800.47393364928905"/>
+<<<<<<< HEAD
         </scene>
         <!--View Controller-->
         <scene sceneID="YOi-gg-NbM">
@@ -95,22 +154,83 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lb7-tr-jhb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-29" y="-611"/>
+=======
+>>>>>>> bb32fd14b6df25f255ac2bec687768a0410ec2db
         </scene>
         <!--Recordings-->
         <scene sceneID="uVa-UB-wUB">
             <objects>
-                <viewController title="Recordings" id="h7S-HF-P6d" sceneMemberID="viewController">
+                <viewController title="Recordings" id="h7S-HF-P6d" customClass="RecordingsViewController" customModule="Speakify" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dzr-mW-0G3">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="X9g-Pb-By3">
+                                <rect key="frame" x="16" y="107" width="358" height="703"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="recordingViewCell" textLabel="39n-Vb-P40" detailTextLabel="fnY-IC-ANL" style="IBUITableViewCellStyleSubtitle" id="X0d-LN-gHQ" customClass="RecordingTableViewCell" customModule="Speakify" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="358" height="61.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="X0d-LN-gHQ" id="1fq-Pv-B7I">
+                                            <rect key="frame" x="0.0" y="0.0" width="326.66666666666669" height="61.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="39n-Vb-P40">
+                                                    <rect key="frame" x="20" y="7.9999999999999982" width="33" height="20.333333333333332"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fnY-IC-ANL">
+                                                    <rect key="frame" x="20.000000000000004" y="31.333333333333336" width="58.333333333333336" height="20.333333333333332"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="hdI-K7-eoX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+<<<<<<< HEAD
                     <navigationItem key="navigationItem" id="f3D-T9-qcl"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zht-rW-Hoi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="938.46153846153845" y="-611.37440758293837"/>
+=======
+                    <navigationItem key="navigationItem" id="dcT-0Y-sSq"/>
+                    <connections>
+                        <outlet property="recordingTable" destination="X9g-Pb-By3" id="a4T-pT-kwQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zht-rW-Hoi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="938" y="-616"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="h8h-Li-H1t">
+            <objects>
+                <viewController id="uAr-Do-R9K" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YG2-VX-OEK">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="j6k-as-5fh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rdd-3c-al1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1740" y="-616"/>
+>>>>>>> bb32fd14b6df25f255ac2bec687768a0410ec2db
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gLe-G7-O9r">
@@ -131,8 +251,15 @@
             <point key="canvasLocation" x="28.985507246376812" y="88.392857142857139"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="xs0-xH-gRD"/>
+    </inferredMetricsTieBreakers>
     <resources>
+<<<<<<< HEAD
         <image name="Image" width="375" height="250"/>
+=======
+        <image name="StartRecordButton" width="62" height="62"/>
+>>>>>>> bb32fd14b6df25f255ac2bec687768a0410ec2db
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
