@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		170312AC2638F6BB0085FA3B /* RecordingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170312AB2638F6BB0085FA3B /* RecordingsViewController.swift */; };
+		170312B3263905BB0085FA3B /* RecordingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170312B2263905BB0085FA3B /* RecordingTableViewCell.swift */; };
 		A5C356AE2637C6DA00EAB3C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C356AD2637C6DA00EAB3C9 /* AppDelegate.swift */; };
 		A5C356B02637C6DA00EAB3C9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C356AF2637C6DA00EAB3C9 /* SceneDelegate.swift */; };
 		A5C356B22637C6DA00EAB3C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C356B12637C6DA00EAB3C9 /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		170312AB2638F6BB0085FA3B /* RecordingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingsViewController.swift; sourceTree = "<group>"; };
+		170312B2263905BB0085FA3B /* RecordingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingTableViewCell.swift; sourceTree = "<group>"; };
 		A5C356AA2637C6DA00EAB3C9 /* Speakify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Speakify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5C356AD2637C6DA00EAB3C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5C356AF2637C6DA00EAB3C9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +64,8 @@
 				A5C356AF2637C6DA00EAB3C9 /* SceneDelegate.swift */,
 				A5C356B12637C6DA00EAB3C9 /* ViewController.swift */,
 				A5C356B32637C6DA00EAB3C9 /* Main.storyboard */,
+				170312B2263905BB0085FA3B /* RecordingTableViewCell.swift */,
+				170312AB2638F6BB0085FA3B /* RecordingsViewController.swift */,
 				A5C356B62637C6DC00EAB3C9 /* Assets.xcassets */,
 				A5C356B82637C6DC00EAB3C9 /* LaunchScreen.storyboard */,
 				A5C356BB2637C6DC00EAB3C9 /* Info.plist */,
@@ -137,6 +143,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				170312AC2638F6BB0085FA3B /* RecordingsViewController.swift in Sources */,
+				170312B3263905BB0085FA3B /* RecordingTableViewCell.swift in Sources */,
 				A5C356B22637C6DA00EAB3C9 /* ViewController.swift in Sources */,
 				A5C356AE2637C6DA00EAB3C9 /* AppDelegate.swift in Sources */,
 				A5C356B02637C6DA00EAB3C9 /* SceneDelegate.swift in Sources */,
