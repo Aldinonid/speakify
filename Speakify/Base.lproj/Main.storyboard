@@ -226,7 +226,7 @@
                         <viewLayoutGuide key="safeArea" id="hdI-K7-eoX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="dcT-0Y-sSq"/>
+                    <navigationItem key="navigationItem" title="Recordings" id="dcT-0Y-sSq"/>
                     <connections>
                         <outlet property="backwardButton" destination="Sav-Tt-esR" id="8Fo-K5-QgM"/>
                         <outlet property="durationLabel" destination="wr0-ee-obr" id="a4M-mV-Ln5"/>
@@ -240,21 +240,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zht-rW-Hoi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="936.92307692307691" y="-616.35071090047393"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="h8h-Li-H1t">
-            <objects>
-                <viewController id="uAr-Do-R9K" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="YG2-VX-OEK">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="j6k-as-5fh"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rdd-3c-al1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1740" y="-616"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gLe-G7-O9r">
@@ -276,7 +261,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="yaR-Bi-8fe"/>
+        <segue reference="Xdg-6K-SB3"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="StartRecordButton" width="62" height="62"/>

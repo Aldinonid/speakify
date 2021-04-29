@@ -35,8 +35,8 @@ class RecordingsViewController: UIViewController {
         recordingTable.dataSource = self
         recordingTable.delegate = self
         getData()
-        playButton.isEnabled = false
 			
+        playButton.isEnabled = false
         forwardButton.isEnabled = false
         backwardButton.isEnabled = false
 
@@ -45,19 +45,13 @@ class RecordingsViewController: UIViewController {
 	func getData() {
 			let documentsUrl =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
 
-
 		do {
 // Get the directory contents urls (including subfolders urls)
 				let directoryContents = try FileManager.default.contentsOfDirectory(at: documentsUrl, includingPropertiesForKeys: nil)
-//				print(directoryContents)
 
 // if you want to filter the directory contents you can do like this:
 				recordingFilePaths = directoryContents.filter{ $0.pathExtension == "m4a" }
-//				print("File urls:",mp3Files)
 				recordingFileNames = recordingFilePaths.map{ $0.deletingPathExtension().lastPathComponent }
-//				print("File list:", mp3FileNames)
-            
-
 		} catch {
 				print(error)
 		}
