@@ -205,7 +205,11 @@
                                             <action selector="playClicked:" destination="h7S-HF-P6d" eventType="touchUpInside" id="5vo-zg-OAO"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0xw-6U-IYp">
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jhk-cT-Mex">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="4"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </progressView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sav-Tt-esR">
                                         <rect key="frame" x="227" y="16" width="33" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="gobackward.15" catalog="system">
@@ -214,14 +218,10 @@
                                             </preferredSymbolConfiguration>
                                         </state>
                                         <connections>
-                                            <action selector="backwardClicked:" destination="h7S-HF-P6d" eventType="touchUpInside" id="GR2-Xp-9wb"/>
-                                            <action selector="backwardsClicked:" destination="h7S-HF-P6d" eventType="touchUpInside" id="hfZ-bf-vqI"/>
+
+                                            <action selector="backwardClicked:" destination="h7S-HF-P6d" eventType="touchUpInside" id="NRT-hc-Fea"/>
                                         </connections>
                                     </button>
-                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jhk-cT-Mex">
-                                        <rect key="frame" x="0.0" y="0.0" width="390" height="4"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </progressView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGray4Color"/>
                             </view>
@@ -231,7 +231,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="dcT-0Y-sSq"/>
                     <connections>
-                        <outlet property="backwardButton" destination="0xw-6U-IYp" id="nTA-dE-vJ4"/>
+                        <outlet property="backwardButton" destination="Sav-Tt-esR" id="8Fo-K5-QgM"/>
                         <outlet property="durationLabel" destination="wr0-ee-obr" id="a4M-mV-Ln5"/>
                         <outlet property="forwardButton" destination="XlF-rO-bwh" id="oG1-hz-W4H"/>
                         <outlet property="playButton" destination="6sx-A9-7gV" id="nCZ-68-Me5"/>

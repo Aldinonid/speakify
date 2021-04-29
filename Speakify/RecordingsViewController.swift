@@ -11,13 +11,14 @@ import AVFoundation
 class RecordingsViewController: UIViewController {
     @IBOutlet weak var recordingTable: UITableView!
     @IBOutlet weak var timerRow: UILabel!
-
+	
     @IBOutlet weak var progressView: UIProgressView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var durationLabel: UILabel!
     @IBOutlet weak var playButton: UIButton!
-    @IBOutlet weak var backwardButton: UIButton!
     @IBOutlet weak var forwardButton: UIButton!
+    @IBOutlet weak var backwardButton: UIButton!
+
     var recordingFilePaths:[URL] = []
     var recordingFileNames: [String] = []
     var recordingFiles: [AVAudioPlayer] = []
@@ -38,8 +39,10 @@ class RecordingsViewController: UIViewController {
         recordingTable.delegate = self
         getData()
         playButton.isEnabled = false
-        backwardButton.isEnabled = false
+			
         forwardButton.isEnabled = false
+        backwardButton.isEnabled = false
+
     }
 	
 	func getData() {
@@ -182,6 +185,8 @@ extension RecordingsViewController: UITableViewDelegate, UITableViewDataSource {
         recordingFilePlayed = recordingFiles[indexPath.row]
         recordingFileNamePlayed = recordingFileNames[indexPath.row]
         
+        audioDurationInt = Int(recordingFilePlayed!.duration)
+        
         playButton.isEnabled = true
         backwardButton.isEnabled = true
         forwardButton.isEnabled = true
@@ -282,9 +287,10 @@ extension RecordingsViewController: UITableViewDelegate, UITableViewDataSource {
                     }
                 }
                 
-                
-                self.recordingFileNames[indexPath.row] = newNameNoExtension
-                self.titleLabel.text = newNameNoExtension
+
+                if self.playButton.isEnabled {
+                    self.titleLabel.text = newNameNoExtension
+                }
                 let newURL = self.recordingFilePaths[indexPath.row].deletingLastPathComponent().appendingPathComponent(newName)
                 try? FileManager.default.moveItem(at: self.recordingFilePaths[indexPath.row], to: newURL)
                 
@@ -306,5 +312,7 @@ extension RecordingsViewController: UITableViewDelegate, UITableViewDataSource {
         let swipeActions = UISwipeActionsConfiguration(actions: [deleteItem, editItem])
 
         return swipeActions
+        
     }
+    
 }
