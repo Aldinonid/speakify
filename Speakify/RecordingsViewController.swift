@@ -11,24 +11,45 @@ class RecordingsViewController: UIViewController {
     
     @IBOutlet weak var recordingTable: UITableView!
     @IBOutlet weak var timerRow: UILabel!
-    let categories = ["Recording 1", "Recording 2"]
+		var recordingFilePaths:[URL] = []
+		var recordingFileNames: [String] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         recordingTable.dataSource = self
         recordingTable.delegate = self
     }
+	
+	func getData() {
+			let documentsUrl =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+
+			do {
+// Get the directory contents urls (including subfolders urls)
+					let directoryContents = try FileManager.default.contentsOfDirectory(at: documentsUrl, includingPropertiesForKeys: nil)
+					print(directoryContents)
+
+// if you want to filter the directory contents you can do like this:
+					recordingFilePaths = directoryContents.filter{ $0.pathExtension == "m4a" }
+// print("File urls:",mp3Files)
+					recordingFileNames = recordingFilePaths.map{ $0.deletingPathExtension().lastPathComponent }
+// print("File list:", mp3FileNames)
+			} catch {
+					print(error)
+				}
+		}
+	
 }
+
 
 extension RecordingsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return categories.count
+				return recordingFileNames.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = recordingTable.dequeueReusableCell(withIdentifier: "recordingViewCell") as! RecordingTableViewCell
         
-        let title = categories[indexPath.row]
+				let title = recordingFileNames[indexPath.row]
         
         cell.textLabel?.text = title
         cell.detailTextLabel?.text = "03.00"
@@ -36,7 +57,7 @@ extension RecordingsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let title = self.categories[indexPath.row]
+        let title = self.recordingFileNames[indexPath.row]
 
         
         let deleteItem = UIContextualAction(style: .destructive, title: "Delete") {  (contextualAction, view, boolValue) in
