@@ -55,7 +55,7 @@
                     <navigationItem key="navigationItem" title="Scenario" id="q4Y-9X-rRh">
                         <barButtonItem key="rightBarButtonItem" title="Recordings" id="nnj-Zj-bHc">
                             <connections>
-                                <segue destination="h7S-HF-P6d" kind="show" id="xs0-xH-gRD"/>
+                                <segue destination="h7S-HF-P6d" kind="show" id="yaR-Bi-8fe"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -64,11 +64,12 @@
                         <outlet property="button2" destination="nNw-uf-G9i" id="esI-va-jQT"/>
                         <outlet property="image1" destination="EHa-W1-0po" id="Qxf-Xn-bir"/>
                         <outlet property="image2" destination="byK-mj-CTJ" id="Xs3-Ni-SSj"/>
+                        <segue destination="kr6-7p-6tR" kind="show" id="9Ly-8u-1qd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="938.46153846153845" y="88.151658767772503"/>
+            <point key="canvasLocation" x="937" y="88"/>
         </scene>
         <!--Training-->
         <scene sceneID="Ieg-fx-6GM">
@@ -82,7 +83,7 @@
                                 <rect key="frame" x="0.0" y="748" width="390" height="62"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Yuw-L1-lpu">
-                                <rect key="frame" x="0.0" y="44" width="390" height="643"/>
+                                <rect key="frame" x="0.0" y="88" width="390" height="599"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00 : 00 : 00.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oqG-bm-BhY">
                                 <rect key="frame" x="0.0" y="703" width="390" height="29"/>
@@ -109,7 +110,7 @@
                     <navigationItem key="navigationItem" title="Training" id="G6V-Rn-Oyf">
                         <barButtonItem key="rightBarButtonItem" title="Recording" id="tLB-xx-KJg">
                             <connections>
-                                <segue destination="h7S-HF-P6d" kind="show" id="Tyf-7h-60g"/>
+                                <segue destination="h7S-HF-P6d" kind="show" id="Xdg-6K-SB3"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -132,15 +133,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="X9g-Pb-By3">
-                                <rect key="frame" x="16" y="107" width="358" height="703"/>
+                                <rect key="frame" x="0.0" y="88" width="390" height="666"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="recordingViewCell" textLabel="39n-Vb-P40" detailTextLabel="fnY-IC-ANL" style="IBUITableViewCellStyleSubtitle" id="X0d-LN-gHQ" customClass="RecordingTableViewCell" customModule="Speakify" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="358" height="61.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="28" width="390" height="61.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="X0d-LN-gHQ" id="1fq-Pv-B7I">
-                                            <rect key="frame" x="0.0" y="0.0" width="326.66666666666669" height="61.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="358.66666666666669" height="61.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="39n-Vb-P40">
@@ -162,18 +163,86 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6fI-tm-Lhf">
+                                <rect key="frame" x="0.0" y="762" width="390" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KY1-Cr-Ztm">
+                                        <rect key="frame" x="24" y="16" width="195" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Duration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wr0-ee-obr">
+                                        <rect key="frame" x="24" y="41" width="195" height="16"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XlF-rO-bwh">
+                                        <rect key="frame" x="333" y="16" width="33" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="goforward.15" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                            </preferredSymbolConfiguration>
+                                        </state>
+                                        <connections>
+                                            <action selector="forwardClicked:" destination="h7S-HF-P6d" eventType="touchUpInside" id="eaW-og-xBB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6sx-A9-7gV">
+                                        <rect key="frame" x="284" y="19" width="25" height="29"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="play.fill" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                            </preferredSymbolConfiguration>
+                                        </state>
+                                        <connections>
+                                            <action selector="playClicked:" destination="h7S-HF-P6d" eventType="touchUpInside" id="5vo-zg-OAO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0xw-6U-IYp">
+                                        <rect key="frame" x="227" y="16" width="33" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="gobackward.15" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                            </preferredSymbolConfiguration>
+                                        </state>
+                                        <connections>
+                                            <action selector="backwardClicked:" destination="h7S-HF-P6d" eventType="touchUpInside" id="GR2-Xp-9wb"/>
+                                            <action selector="backwardsClicked:" destination="h7S-HF-P6d" eventType="touchUpInside" id="hfZ-bf-vqI"/>
+                                        </connections>
+                                    </button>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jhk-cT-Mex">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="4"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </progressView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray4Color"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hdI-K7-eoX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="dcT-0Y-sSq"/>
                     <connections>
+                        <outlet property="backwardButton" destination="0xw-6U-IYp" id="nTA-dE-vJ4"/>
+                        <outlet property="durationLabel" destination="wr0-ee-obr" id="a4M-mV-Ln5"/>
+                        <outlet property="forwardButton" destination="XlF-rO-bwh" id="oG1-hz-W4H"/>
+                        <outlet property="playButton" destination="6sx-A9-7gV" id="nCZ-68-Me5"/>
+                        <outlet property="progressView" destination="jhk-cT-Mex" id="1HD-lT-hoe"/>
                         <outlet property="recordingTable" destination="X9g-Pb-By3" id="a4T-pT-kwQ"/>
+                        <outlet property="titleLabel" destination="KY1-Cr-Ztm" id="86G-Yz-kPD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zht-rW-Hoi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="938" y="-616"/>
+            <point key="canvasLocation" x="936.92307692307691" y="-616.35071090047393"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="h8h-Li-H1t">
@@ -210,14 +279,20 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Tyf-7h-60g"/>
+        <segue reference="Xdg-6K-SB3"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Image" width="375" height="250"/>
         <image name="Image2" width="344" height="344"/>
         <image name="StartRecordButton" width="62" height="62"/>
+        <image name="gobackward.15" catalog="system" width="121" height="128"/>
+        <image name="goforward.15" catalog="system" width="121" height="128"/>
+        <image name="play.fill" catalog="system" width="116" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
