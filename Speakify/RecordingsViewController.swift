@@ -117,6 +117,7 @@ class RecordingsViewController: UIViewController {
         if audioDurationInt! - 10 <= 0 {
             audioPlayer.stop()
             timer.invalidate()
+						audioPlayer.currentTime = 0
             audioDurationInt = Int(audioPlayer.duration)
             dateComponentsFormatter.allowedUnits = [.hour, .minute, .second]
             dateComponentsFormatter.unitsStyle = .positional
