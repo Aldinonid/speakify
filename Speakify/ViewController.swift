@@ -27,6 +27,15 @@ class ViewController: UIViewController {
 					
 					image1.contentMode = .scaleAspectFill
 					image2.contentMode = .scaleAspectFill
+                
+                image1.layer.borderColor = UIColor.gray.cgColor
+                image1.layer.borderWidth = 1
+                
+                image2.layer.borderColor = UIColor.gray.cgColor
+                image2.layer.borderWidth = 1
+//
+//                image1.layer.borderColor = CGColor(red: 184, green: 184, blue: 184, alpha: 100)
+//                image2.layer.borderColor = CGColor(red: 184, green: 184, blue: 184, alpha: 100)
 	}
 
 	@IBAction func button1Tapped(_ sender: Any) {

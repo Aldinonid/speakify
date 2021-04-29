@@ -52,9 +52,9 @@ class TrainingViewController: UIViewController, AVAudioRecorderDelegate {
 			}
 		
 			if (isInterviewImage) {
-				trainingImage.image = UIImage(named: "Image")
+				trainingImage.image = UIImage(named: "ibuInterviewerRecord2")
 			} else {
-				trainingImage.image = UIImage(named: "Image2")
+				trainingImage.image = UIImage(named: "speechRecord")
 			}
 
 			let tapImage = UITapGestureRecognizer(target: self, action: #selector(onClick))
