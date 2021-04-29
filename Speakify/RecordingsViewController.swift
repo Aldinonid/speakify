@@ -18,6 +18,7 @@ class RecordingsViewController: UIViewController {
         super.viewDidLoad()
         recordingTable.dataSource = self
         recordingTable.delegate = self
+				getData()
     }
 	
 	func getData() {
