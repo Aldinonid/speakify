@@ -22,14 +22,27 @@ class TrainingViewController: UIViewController, AVAudioRecorderDelegate {
 	var count: Double = 0.0
 	var opQueue = OperationQueue()
 	
+	var question: [String] = [	"Tell me about yourself.",
+														"What are your strength?",
+														"What are your weaknesses?",
+														"Why are you leaving / left your previous job?",
+														"Why should we hire you?",
+														"Where do you see yourself in 5 years?",
+														"Why do you want this job?",
+														"Do you consider yourself successful?",
+														"What motivates you to join this company?",
+														"What skills do you bring to the program?",
+														"How does our program fit with your goals?"
+													]
+	
 	var isInterviewImage: Bool = false
 	
 	override func viewDidLoad() {
 			super.viewDidLoad()
 		
 			if (isQuestionable) {
-				let alert = UIAlertController(title: "Question", message: "Tell me about yourself.", preferredStyle: .alert)
-				alert.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
+				let alert = UIAlertController(title: "Question", message: question.randomElement(), preferredStyle: .alert)
+				alert.addAction(UIAlertAction(title: "Begin", style: .default, handler: nil))
 				self.opQueue.addOperation {
 					OperationQueue.main.addOperation({
 						self.present(alert, animated: true, completion: nil)

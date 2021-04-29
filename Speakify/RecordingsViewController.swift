@@ -10,7 +10,6 @@ import AVFoundation
 
 class RecordingsViewController: UIViewController {
     @IBOutlet weak var recordingTable: UITableView!
-    @IBOutlet weak var timerRow: UILabel!
 	
     @IBOutlet weak var progressView: UIProgressView!
     @IBOutlet weak var titleLabel: UILabel!
@@ -30,8 +29,6 @@ class RecordingsViewController: UIViewController {
     var timer = Timer()
     var recordingFilePlayed: AVAudioPlayer?
     var recordingFileNamePlayed: String?
-	
-//    var numberOfRecords = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,11 +47,11 @@ class RecordingsViewController: UIViewController {
 
 
 		do {
-				// Get the directory contents urls (including subfolders urls)
+// Get the directory contents urls (including subfolders urls)
 				let directoryContents = try FileManager.default.contentsOfDirectory(at: documentsUrl, includingPropertiesForKeys: nil)
 //				print(directoryContents)
 
-				// if you want to filter the directory contents you can do like this:
+// if you want to filter the directory contents you can do like this:
 				recordingFilePaths = directoryContents.filter{ $0.pathExtension == "m4a" }
 //				print("File urls:",mp3Files)
 				recordingFileNames = recordingFilePaths.map{ $0.deletingPathExtension().lastPathComponent }
@@ -71,7 +68,7 @@ class RecordingsViewController: UIViewController {
              return
         }
         
-        if audioDurationInt! + 15 >= totalDurationInt! {
+        if audioDurationInt! + 10 >= totalDurationInt! {
             audioPlayer.currentTime = 0
             audioDurationInt = Int(audioPlayer.duration)
             dateComponentsFormatter.allowedUnits = [.hour, .minute, .second]
@@ -80,8 +77,8 @@ class RecordingsViewController: UIViewController {
             durationLabel.text = "-\(audioDurationString!)"
             progressView.progress = 0
         } else {
-            audioPlayer.currentTime -= 15
-            audioDurationInt! += 15
+            audioPlayer.currentTime -= 10
+            audioDurationInt! += 10
             dateComponentsFormatter.allowedUnits = [.hour, .minute, .second]
             dateComponentsFormatter.unitsStyle = .positional
             audioDurationString = dateComponentsFormatter.string(from: TimeInterval(audioDurationInt!))
@@ -117,7 +114,7 @@ class RecordingsViewController: UIViewController {
              return
         }
         
-        if audioDurationInt! - 15 <= 0 {
+        if audioDurationInt! - 10 <= 0 {
             audioPlayer.stop()
             timer.invalidate()
             audioDurationInt = Int(audioPlayer.duration)
@@ -128,8 +125,8 @@ class RecordingsViewController: UIViewController {
             playButton.setImage(UIImage(systemName: "play.fill"), for: .normal)
             progressView.progress = 0
         } else {
-            audioPlayer.currentTime += 15
-            audioDurationInt! -= 15
+            audioPlayer.currentTime += 10
+            audioDurationInt! -= 10
             dateComponentsFormatter.allowedUnits = [.hour, .minute, .second]
             dateComponentsFormatter.unitsStyle = .positional
             audioDurationString = dateComponentsFormatter.string(from: TimeInterval(audioDurationInt!))
