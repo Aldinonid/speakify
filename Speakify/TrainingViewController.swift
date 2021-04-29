@@ -22,19 +22,27 @@ class TrainingViewController: UIViewController, AVAudioRecorderDelegate {
 	var count: Double = 0.0
 	var opQueue = OperationQueue()
 	
+	var isInterviewImage: Bool = false
+	
 	override func viewDidLoad() {
 			super.viewDidLoad()
 		
-		if (isQuestionable) {
-			let alert = UIAlertController(title: "Question", message: "HELLO WORLD!", preferredStyle: .alert)
-			alert.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
-			self.opQueue.addOperation {
-				OperationQueue.main.addOperation({
-					self.present(alert, animated: true, completion: nil)
-				})
+			if (isQuestionable) {
+				let alert = UIAlertController(title: "Question", message: "Tell me about yourself.", preferredStyle: .alert)
+				alert.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
+				self.opQueue.addOperation {
+					OperationQueue.main.addOperation({
+						self.present(alert, animated: true, completion: nil)
+					})
+				}
+				isQuestionable = false
 			}
-			isQuestionable = false
-		}
+		
+			if (isInterviewImage) {
+				trainingImage.image = UIImage(named: "Image")
+			} else {
+				trainingImage.image = UIImage(named: "Image2")
+			}
 
 			let tapImage = UITapGestureRecognizer(target: self, action: #selector(onClick))
 			recordImage.addGestureRecognizer(tapImage)
